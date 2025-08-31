@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="light">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/images/icon-32.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="modulepreload" href="/_app/immutable/entry/start.ZrNRF8lt.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.BZfEIFMo.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/utils.I9ykZFg1.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.KI1UvaFh.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/environment.D71-640i.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index-client.CAGqXySC.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.DzQjod0F.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/preload-helper.C1FmrZbK.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/legacy-client.C8Gh1gD3.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/disclose-version.9JvnxFML.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/this.D4hMMKFF.js">
+	</head>
+	<body data-sveltekit-preload-data="hover" id="body" class="bg-primary text-foreground">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_1gw01jp = {
+						base: ""
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.ZrNRF8lt.js"),
+						import("/_app/immutable/entry/app.DzQjod0F.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('/service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
+
+		<script>
+			(function () {
+				window.__theme = 'light';
+
+				function setProperTheme(newTheme = 'light') {
+					window.__theme = newTheme;
+					document.querySelector('html').setAttribute('class', `${newTheme}`);
+
+					try {
+						localStorage.setItem('theme', newTheme);
+					} catch (err) {}
+				}
+
+				function setTheme(newTheme = 'light') {
+					if (newTheme && newTheme !== 'null') {
+						setProperTheme(newTheme);
+					} else {
+						setProperTheme('light');
+					}
+				}
+
+				window.__setActiveTheme = setTheme;
+
+				// Run on the page load
+				try {
+					var t = localStorage.getItem('theme');
+					if (t && t !== 'null') {
+						window.__theme = t;
+					}
+				} catch (err) {}
+				setTheme(window.__theme);
+			})();
+		</script>
+	</body>
+</html>
